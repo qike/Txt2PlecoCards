@@ -1,27 +1,19 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# This tool takes a file of plain chinese characters and creates an XML
+# Author: Qi Ke (qike.sea@gmail.com)
+
+# This tool takes a plain text file of chinese characters and creates an XML
 # file following PLECO (https://www.pleco.com/) schema.
 # The generated xml file can then be imported into PLECO as flashcards.
 #
 # Usage: ===>
 #  Txt2PlecoCards.py  input_text_file  category  output_PLECO_xml_file
 #
-# To use the tool, make sure a template.xml file with the following
-# content exists in the same folder as this python file.
+# e.g. Txt2PlecoCards.py './book1.txt' 'Book !' './1.xml'
 #
-# <?xml version="1.0" encoding="UTF-8"?>
-# <plecoflash formatversion="2" creator="Qi Ke" generator="Pleco 2.0 Flashcard Exporter" platform="Android" created="1456630081">
-# 	<cards>
-# 		<card language="chinese">
-# 			<entry>
-# 				<headword charset="sc">八</headword>
-# 			</entry>
-# 			<catassign category="Grade K"/>
-# 		</card>
-# 	</cards>
-# </plecoflash>
+# To use the tool, make sure the template.xml file exists in the same
+# folder of this python file.
 
 import codecs
 import copy
